@@ -47,8 +47,12 @@ wind = match.group(1)
 
 match = re.search("<relative_humidity>([^<]*)</relative_humidity>", webpage)
 rh = match.group(1)
-
+print "         "
+print "         Black Canyon Weather Report"
 print "         Temperature", temp
 print "         Wind",wind
 print "         RH",rh,"%"
 print "        ",time
+print "        "
+
+#end
