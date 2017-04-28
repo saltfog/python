@@ -10,3 +10,5 @@ house = areas[-1][1]
 
 # Print the variable eat_sleep_area
 #print(eat_sleep_area)
+
+

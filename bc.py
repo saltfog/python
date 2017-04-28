@@ -10,18 +10,16 @@
 #-------------------------------------------------------------------------------
 
 
-#!/usr/bin/python
-#print "Content-Type: text/plain\n\n"
-import urllib, re, sys
-import cgi
+import urllib
+import re
+import sys
 
-#LOCO = sys.argv[1].upper()
 
-url = "http://api.wunderground.com/weatherstation/WXCurrentObXML.asp?ID=MGRAI1"
+url = 'http://api.wunderground.com/weatherstation/WXCurrentObXML.asp?ID=MGRAI1'
 
-url_1 = "http://api.wunderground.com/weatherstation/WXCurrentObXML.asp?ID=MAR795"
+url_1 = 'http://api.wunderground.com/weatherstation/WXCurrentObXML.asp?ID=MAR795'
 
-url_2 = "http://api.wunderground.com/weatherstation/WXCurrentObXML.asp?ID=KIDGRACE5"
+url_2 = 'http://api.wunderground.com/weatherstation/WXCurrentObXML.asp?ID=KIDGRACE5'
 
 # Create the regex and use multiline
 
@@ -55,14 +53,14 @@ rh = match.group(1)
 match = re.search("<pressure_string>([^<]*)</pressure_string>", webpage2)
 press = match.group(1)
 
-print "         "
-print "         Black Canyon Weather Report"
-print "         Location", loc
-print "         Temperature", temp
-print "         Wind",wind
-print "         RH",rh,"%"
-print "         Pressure", press
-print "        ",time
-print "        "
+print("         ")
+print("         Black Canyon Weather Report")
+print("         Location"), loc
+print("         Temperature"), temp
+print("         Wind"), wind
+print("         RH"), rh
+print("         Pressure"), press
+print("        "), time
+print("        ")
 
 #end
